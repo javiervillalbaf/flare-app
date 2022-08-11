@@ -100,13 +100,23 @@ a {
 
 /* ANIMATION HOVER BTN */
 
-.btn1, .btn3{
+.btn1{
     color: black;
     padding: .5rem 2rem;
     border: 1px solid white;
     border-radius: 28px;
     background-color: white;
     font-family: var(--tipografia);
+}
+
+.btn3{
+    color: black;
+    padding: .5rem 2rem;
+    border: 1px solid white;
+    border-radius: 28px;
+    background-color: white;
+    font-family: var(--tipografia);
+    margin-bottom: 24px;
 }
 
 .animation a:hover::before, .div-footer a:hover::before{
@@ -280,7 +290,7 @@ a {
 .footer{
     background-image: linear-gradient(rgba(194, 68, 30, 0.925), rgba(238, 45, 45, 0.863)), url(https://images.unsplash.com/photo-1494861895304-fb272971c078?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
     background-size: cover;
-    height: 25vh;
+    height: 100%;
     margin-top: 50px;
 }
 
@@ -288,20 +298,38 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 25vh;
+    height: 33vh;
     justify-content: center;
+    font-family: var(--tipografia);
 }
 
 .div-footer h2{
     padding: .5rem 0;
     font-size: 2rem;
-    font-family: var(--tipografia);
     color: white;
 }
 
 .div-footer h3{
-    font-family: var(--tipografia);
     font-weight: 200;
     color: white;
     padding-bottom: 45px;
+}
+
+.div-footer h5{
+    padding-top: 10px;
+    color: white
+}
+
+.box2 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.separator2 {
+    height: 4px;
+    flex-grow: .1;
+    background-color: white;
+    transition: all 1s ease-in-out;
+    margin-top: 30px;
 }
