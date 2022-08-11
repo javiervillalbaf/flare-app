@@ -32,7 +32,7 @@
     display: flex;
     justify-content: space-around;
     color: white;
-    margin-right: 7rem;
+    margin-right: 5rem;
 }
 
 .mail-celular {
@@ -69,7 +69,7 @@
 
 article {
     max-width: 712px;
-    margin-left: 14rem;
+    margin-left: 16rem;
 }
 
 article img {
@@ -100,7 +100,7 @@ a {
 
 /* ANIMATION HOVER BTN */
 
-.btn1 {
+.btn1, .btn3{
     color: black;
     padding: .5rem 2rem;
     border: 1px solid white;
@@ -109,21 +109,37 @@ a {
     font-family: var(--tipografia);
 }
 
-.animation a:hover::before {
+.animation a:hover::before, .div-footer a:hover::before{
     transform: scaleX(1);
 }
 
-.animation a {
+.animation a, .div-footer a{
     position: relative;
 }
 
-.animation .btn1::before {
+.div-footer .btn3::before{
     content: '';
     position: absolute;
-    bottom: 4px;
-    left: 30px;
+    bottom: 5px;
+    left: 33px;
+    width: 50%;
+    height: 3px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #ff0000, #d64c4c, #c77250);
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+
+.animation .btn1::before{
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 29px;
     width: 60%;
-    height: 5px;
+    height: 3px;
     border-radius: 10px;
     background: linear-gradient(to right, #ff0000, #d64c4c, #c77250);
     z-index: 1;
@@ -135,10 +151,10 @@ a {
 .animation .btn2::before {
     content: '';
     position: absolute;
-    bottom: 4px;
+    bottom: 5px;
     left: 30px;
     width: 60%;
-    height: 5px;
+    height: 3px;
     border-radius: 10px;
     background: linear-gradient(to right, #ffffff, #cfcfcf, #b4b4b4);
     z-index: 1;
@@ -182,7 +198,7 @@ a {
 }
 
 .section-top h2,
-.section-mid h2 {
+.section-mid h2{
     padding: .5rem 0;
     font-size: 2rem;
     font-family: var(--tipografia);
@@ -197,6 +213,7 @@ a {
 .div-top {
     display: flex;
     justify-content: center;
+    padding: 0px 204px;
 }
 
 .div-top div {
@@ -256,4 +273,35 @@ a {
 .separator:hover {
     flex-grow: 1;
     cursor: pointer;
+}
+
+/* FOOTER */
+
+.footer{
+    background-image: linear-gradient(rgba(194, 68, 30, 0.925), rgba(238, 45, 45, 0.863)), url(https://images.unsplash.com/photo-1494861895304-fb272971c078?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+    background-size: cover;
+    height: 25vh;
+    margin-top: 50px;
+}
+
+.div-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 25vh;
+    justify-content: center;
+}
+
+.div-footer h2{
+    padding: .5rem 0;
+    font-size: 2rem;
+    font-family: var(--tipografia);
+    color: white;
+}
+
+.div-footer h3{
+    font-family: var(--tipografia);
+    font-weight: 200;
+    color: white;
+    padding-bottom: 45px;
 }
